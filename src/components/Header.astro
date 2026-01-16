@@ -7,9 +7,9 @@ import { navigation, siteData } from '../data/siteData';
     <div class="flex items-center justify-between py-4">
       <!-- Logo -->
       <div class="shrink-0 flex items-center">
-        <a href="/" class="text-2xl font-bold text-orange-500 font-heading tracking-tight">
+        <img class="w-8 h-10" src="logocd.svg"> </img>  <span>   </span>
+        <a href="/" class="text-2xl font-bold text-lime-500 font-heading tracking-tight">
           {siteData.name}
-        </a>
       </div>
 
       <!-- Desktop Navigation -->
@@ -17,16 +17,16 @@ import { navigation, siteData } from '../data/siteData';
         {navigation.map((item) => (
           <a
             href={item.href}
-            class="text-gray-300 hover:text-orange-500 transition-colors font-medium text-base py-2"
+            class="text-gray-300 hover:text-lime-500 transition-colors font-medium text-base py-2"
           >
             {item.name}
           </a>
         ))}
         <a
           href="/contact"
-          class="bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2 px-6 py-2.5"
+          class="bg-lime-600 hover:bg-lime-700 text-white rounded-lg font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2 px-6 py-2.5"
         >
-          Join Now
+          Comienza hoy
           <i class="ri-arrow-right-line"></i>
         </a>
       </div>
@@ -50,14 +50,14 @@ import { navigation, siteData } from '../data/siteData';
       {navigation.map((item) => (
         <a
           href={item.href}
-          class="block px-4 py-3 text-gray-300 hover:text-orange-500 hover:bg-slate-800 rounded-lg transition-colors font-medium"
+          class="block px-4 py-3 text-gray-300 hover:text-lime-500 hover:bg-slate-800 rounded-lg transition-colors font-medium"
         >
           {item.name}
         </a>
       ))}
       <a
         href="/contact"
-        class="flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center font-semibold transition-all duration-200 mt-2 shadow-md hover:shadow-lg"
+        class="flex items-center justify-center gap-2 px-6 py-3 bg-lime-500 hover:bg-lime-600 text-white rounded-lg text-center font-semibold transition-all duration-200 mt-2 shadow-md hover:shadow-lg"
       >
         Join Now
         <i class="ri-arrow-right-line"></i>

@@ -1,7 +1,7 @@
 export const siteData = {
-  name: "FitZone Gym",
-  tagline: "Transform Your Body, Transform Your Life",
-  description: "Your premier destination for fitness and wellness",
+  name: "Cultivo Digital",
+  tagline: "Sembramos tecnología, cosechamos resultados",
+  description: "En Cultivo Digital fusionamos estrategia de comunicación con ingeniería web de alto nivel. Diseñamos ecosistemas digitales que conectan con tu audiencia y escalan tu negocio.",
   address: "123 Fitness Street, Health City, HC 12345",
   phone: "+1 (555) 123-4567",
   email: "info@fitzonegym.com",
@@ -48,43 +48,32 @@ export const contactInfo = [
 ];
 
 export const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Classes", href: "/classes" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Contact", href: "/contact" },
+  { name: "Inicio", href: "/" },
+  { name: "Nosotros", href: "/#nosotros" },
+  { name: "Servicios", href: "/#features" },
+  { name: "Contacto", href: "/contact" },
 ];
 
 export const features = [
   {
-    title: "24/7 Access",
-    description: "Work out on your schedule with round-the-clock access to our facilities",
-    icon: "ri-time-line",
+    title: "Desarrollo Web con enfoque estratégico",
+    description: "No solo escribimos código; planificamos tu éxito. Desde la arquitectura de la idea hasta la ejecución técnica, entregamos sitios robustos y rápidos.",
+    icon: "ri-pages-line",
   },
   {
-    title: "Expert Trainers",
-    description: "Certified personal trainers to guide you on your fitness journey",
-    icon: "ri-user-star-line",
+    title: "Optimización y SEO",
+    description: "¿Tienes una web que nadie encuentra? Auditamos y potenciamos tu sitio actual para que Google te valore y tus usuarios se queden. Mejoramos velocidad, estructura y autoridad.",
+    icon: "ri-seo-line",
   },
   {
-    title: "Modern Equipment",
-    description: "State-of-the-art fitness equipment for all your training needs",
-    icon: "ri-settings-3-line",
+    title: "Estrategia de Ads y Conversión",
+    description: "Invertir en publicidad sin estrategia es tirar dinero. Diseñamos campañas en Google y Meta que cierran el círculo entre el clic y la venta.",
+    icon: "ri-target-line",
   },
   {
-    title: "Group Classes",
-    description: "Join energizing group classes from yoga to HIIT",
-    icon: "ri-group-line",
-  },
-  {
-    title: "Nutrition Support",
-    description: "Get personalized nutrition plans to complement your workouts",
-    icon: "ri-restaurant-line",
-  },
-  {
-    title: "Community",
-    description: "Join a supportive community of fitness enthusiasts",
-    icon: "ri-community-line",
+    title: "Contenido Lab: IA y Multimedia",
+    description: "El contenido es el combustible de tu marca. Utilizamos Inteligencia Artificial de vanguardia para crear narrativa persuasiva y visuales que mantienen tu marca relevante.",
+    icon: "ri-ai-generate-2",
   },
 ];
 
