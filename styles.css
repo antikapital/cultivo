@@ -1,0 +1,337 @@
+/* 
+   Design System: Cultivo Digital - "The Digital Greenhouse"
+   Aesthetics: Premium, Organic, Tech-forward, Editorial
+*/
+
+:root {
+    /* Colors - HSL for flex */
+    --primary-h: 161;
+    --primary-s: 100%;
+    --primary-l: 20%;
+    --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    --primary-container: hsl(162, 100%, 26%);
+    
+    --surface: hsl(210, 25%, 98%);
+    --surface-container-low: hsl(210, 20%, 96%);
+    --surface-container-lowest: hsl(0, 0%, 100%);
+    --on-surface: hsl(200, 9%, 11%);
+    --on-surface-variant: hsl(150, 10%, 26%);
+    
+    --secondary-fixed: hsl(228, 100%, 93%);
+    --on-secondary-fixed-variant: hsl(228, 48%, 33%);
+    
+    --outline-variant: hsla(140, 10%, 78%, 0.15);
+
+    /* Typography */
+    --font-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+    /* Spacing */
+    --space-base: 1rem;
+    --section-padding: 6rem 2rem;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--on-surface);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+/* Transitions & Micro-animations */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+.active-scale {
+    transition: transform 0.1s ease;
+}
+.active-scale:active {
+    transform: scale(0.96);
+}
+
+/* Components */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-family: var(--font-body);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-container));
+    color: white;
+    box-shadow: 0 10px 30px -10px hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.3);
+}
+
+.btn-secondary {
+    background: var(--surface-container-low);
+    color: var(--on-surface);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sectional Transitions (No-Line Rule) */
+.surface-low { background-color: var(--surface-container-low); }
+.surface-lowest { background-color: var(--surface-container-lowest); }
+
+/* Icons */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* WhatsApp FAB */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* Form Styles - "Soft Entry" philosophy */
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--on-surface-variant);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.input-field {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: var(--surface-container-low);
+    border: 2px solid transparent;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--on-surface);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:focus {
+    outline: none;
+    background: var(--surface-container-lowest);
+    border-color: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.15);
+    box-shadow: 0 10px 30px -10px hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.1);
+    transform: translateY(-2px);
+}
+
+textarea.input-field {
+    min-height: 150px;
+    resize: none;
+}
+
+/* Success State Utility */
+.form-success-overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: var(--surface-container-lowest);
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2rem;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button Loading State */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 968px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2.8rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h2 {
+        font-size: 2.2rem !important;
+    }
+
+    /* Layout Stacking */
+    #hero .container,
+    #nosotros .container,
+    #contacto .container,
+    #testimonios .container {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+        text-align: center;
+    }
+
+    /* Section Specific Adjustments */
+    .hero-content {
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image div { transform: none !important; }
+    .glass { position: static !important; margin: 0 auto !important; transform: none !important; margin-top: 2rem !important; }
+
+    /* Logos (Social Proof) */
+    div[style*="display: flex; justify-content: center; align-items: center; opacity: 0.5;"] {
+        gap: 2rem !important;
+    }
+
+    img[style*="height: 120px"] {
+        height: 70px !important;
+    }
+
+    /* Manicure Banner */
+    section img[style*="height: 500px"] {
+        height: 300px !important;
+    }
+
+    /* Contact Form & Info */
+    #contacto div[style*="display: flex; gap: 1.5rem; align-items: center"] {
+        justify-content: center;
+    }
+
+    .surface-lowest {
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* Footer */
+    footer .container {
+        flex-direction: column;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    footer .container > div[style*="display: flex"] {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.25rem !important;
+    }
+    
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-content div[style*="display: flex"] {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .btn { display: none; } /* Hide heavy CTA in nav on mobile */
+    #hero h1 { font-size: 2.5rem; }
+    .container { padding: 0 1.5rem; }
+}
