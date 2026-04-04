@@ -33,7 +33,7 @@ app.post('/api/contact', async (req, res) => {
     // 3. Email Content
     const mailOptions = {
         from: email,
-        to: 'contacto@cultivodigital.mx', // Where leads will arrive
+        to: 'antikapital@gmail.com', // Where leads will arrive
         subject: `Nueva Solicitud: ${service} - ${name}`,
         text: `Nombre: ${name}\nEmail: ${email}\nServicio: ${service}\n\nMensaje:\n${message}`,
         html: `
