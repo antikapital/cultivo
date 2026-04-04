@@ -25,8 +25,8 @@ app.post('/api/contact', async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail', // or 'outlook', or your custom SMTP
         auth: {
-            user: 'tu_correo@gmail.com',
-            pass: 'tu_password_de_aplicacion' 
+            user: 'antikapital@gmail.com',
+            pass: 'ijvc yumv mkvw dlhy' 
         }
     });
 
